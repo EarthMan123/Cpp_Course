@@ -17,12 +17,7 @@ class node{
 //     NULL  NULL
 // 10 -1 -1
 
-// 1 2 3 4 5 6 7 -1 -1 -1 -1 -1 -1 -1 -1
 
-//                   1
-//              2                3
-//           4      5           6   7
-//        -1  -1  -1 -1   -1 -1 -1 -1
 
 node* buildTree(){
     int d;
@@ -77,13 +72,13 @@ void printPostorder(node *root){
 
 
 int main(){
-    // node *root = new node(10);
-    // root->left = new node(20);
-    // root->right = new node(25);
-    // root->left->left = new node(30);
-    // root->left->right = new node(35);
+    node *root = new node(1);
+    root->left = new node(2);
+    root->right = new node(3);
+    root->left->left = new node(4);
+    root->left->right = new node(5);
 
-    node *root = buildTree();
+    // node *root = buildTree();
     printPreorder(root);
     cout << endl;
     printInorder(root);
